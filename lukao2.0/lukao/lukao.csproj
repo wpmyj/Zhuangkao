@@ -1,0 +1,207 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96D417BA-CA47-40D4-8A42-9D6B34FE50DA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>lukao</RootNamespace>
+    <AssemblyName>lukao</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ksdevice, Version=1.0.2889.17674, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ksdevice\ksdevice\bin\Debug\ksdevice.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CController.cs" />
+    <Compile Include="CDatabase.cs" />
+    <Compile Include="CFindAndSaveStudent.cs" />
+    <Compile Include="ChangePassword_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassword_Form.Designer.cs">
+      <DependentUpon>ChangePassword_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CIDCardInfo.cs" />
+    <Compile Include="CImagePrintObjSet.cs" />
+    <Compile Include="CIOCard.cs" />
+    <Compile Include="CKsDevModel.cs" />
+    <Compile Include="CKsDevManager.cs" />
+    <Compile Include="CModel.cs" />
+    <Compile Include="CMsSqlDatabase.cs" />
+    <Compile Include="CMyMessageFuns.cs" />
+    <Compile Include="CPrintContent.cs" />
+    <Compile Include="CPrintObjSet.cs" />
+    <Compile Include="CSeriesMsg.cs" />
+    <Compile Include="CStudent.cs" />
+    <Compile Include="CTextPrintObjSet.cs" />
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_view.Designer.cs">
+      <DependentUpon>main_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Form.Designer.cs">
+      <DependentUpon>Menu_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleConfig.cs" />
+    <Compile Include="ModuleSettings.cs" />
+    <Compile Include="mymd5.cs" />
+    <Compile Include="Print_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_form.Designer.cs">
+      <DependentUpon>Print_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChangePassword_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChangePassword_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_view.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>main_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Menu_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetKsxmForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetKsxmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetKsy_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetKsy_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPrint_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetPrint_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Setting_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetUserForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="zhuangkaoDataSet.xsc">
+      <DependentUpon>zhuangkaoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zhuangkaoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zhuangkaoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zhuangkaoDataSet.xss">
+      <DependentUpon>zhuangkaoDataSet.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SetKsxmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetKsxmForm.Designer.cs">
+      <DependentUpon>SetKsxmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetKsy_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetKsy_Form.Designer.cs">
+      <DependentUpon>SetKsy_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPrint_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPrint_Form.Designer.cs">
+      <DependentUpon>SetPrint_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Form.designer.cs">
+      <DependentUpon>Setting_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetUserForm.Designer.cs">
+      <DependentUpon>SetUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zhuangkaoDataSet.cs">
+      <DependentUpon>zhuangkaoDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="zhuangkaoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zhuangkaoDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

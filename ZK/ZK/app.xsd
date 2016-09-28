@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AppConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Intro" type="Introduction" />
+        <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Exams" type="Exams" />
+        <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Practices" type="Practices" />
+        <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Options" type="Options" />
+      </xs:sequence>
+      <xs:attribute name="MainTitle" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Introduction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="IntroFilePath" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="Title" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Exams">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="Exam" type="Exam" />
+    </xs:sequence>
+    <xs:attribute name="Title" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Exam">
+    <xs:complexContent mixed="false">
+      <xs:extension base="Practice">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="ExamCtrl" type="UsrCtrlInfo" />
+        </xs:sequence>
+        <xs:attribute name="HasQueue" type="xs:boolean" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Practice">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Monitor" type="ClsInfo" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Translator" type="ClsInfo" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="StateManager" type="ClsInfo" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="ModelDisplay" type="UsrCtrlInfo" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="LED" type="ClsInfo" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="LEDConfig" type="ClsInfo" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Setting" type="ClsInfo" />
+    </xs:sequence>
+    <xs:attribute name="LicenseList" type="xs:string" />
+    <xs:attribute name="Title" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="ClsInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="ClsName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="ClsFilePath" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute name="Name" type="xs:string" />
+    <xs:attribute name="ConfigFilePath" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="UsrCtrlInfo">
+    <xs:complexContent mixed="false">
+      <xs:extension base="ClsInfo">
+        <xs:attribute name="X" type="xs:int" />
+        <xs:attribute name="Y" type="xs:int" />
+        <xs:attribute name="Height" type="xs:int" />
+        <xs:attribute name="Width" type="xs:int" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Practices">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="Practice" type="Practice" />
+    </xs:sequence>
+    <xs:attribute name="Title" type="xs:string" />
+  </xs:complexType>
+  <xs:complexType name="Options">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" form="unqualified" name="Option" type="ClsInfo" />
+      <xs:element minOccurs="0" maxOccurs="1" form="unqualified" name="Monitor" type="ClsInfo" />
+    </xs:sequence>
+    <xs:attribute name="Title" type="xs:string" />
+  </xs:complexType>
+</xs:schema>

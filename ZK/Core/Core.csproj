@@ -1,0 +1,71 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Youdundianzi.Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exam\BaseExamTranslator.cs" />
+    <Compile Include="Exam\Exam.cs" />
+    <Compile Include="Exam\IExamEventHandler.cs" />
+    <Compile Include="Exam\IExamObserver.cs" />
+    <Compile Include="Exam\IResultMessage.cs" />
+    <Compile Include="Exam\IState.cs" />
+    <Compile Include="Exam\IStateManager.cs" />
+    <Compile Include="Exam\ITranslator.cs" />
+    <Compile Include="Exam\Logger.cs" />
+    <Compile Include="Exam\StateManager.cs" />
+    <Compile Include="Exam\CState.cs" />
+    <Compile Include="Exam\StateManagerFactory.cs" />
+    <Compile Include="Exam\TranslatorFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signal\IMonData.cs" />
+    <Compile Include="Signal\CSignals.cs" />
+    <Compile Include="Signal\IIO.cs" />
+    <Compile Include="Signal\IMonObserver.cs" />
+    <Compile Include="Signal\ISignalMonitor.cs" />
+    <Compile Include="Signal\SignalMonitorFactory.cs" />
+    <Compile Include="Util\AssemblyInfoFactory.cs" />
+    <Compile Include="Util\CHotKey.cs" />
+    <Compile Include="Util\IHotKeyReceiver.cs" />
+    <Compile Include="Util\ISettings.cs" />
+    <Compile Include="Util\ModuleConfig.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

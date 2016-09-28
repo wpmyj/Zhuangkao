@@ -1,0 +1,102 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Share", "Share\Share.csproj", "{8D27F55A-D857-43B0-84CE-FF57410BD0CB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0} = {10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Motor", "Motor\Motor.csproj", "{BDAE0410-43C8-4E40-BF25-6942A36FB70C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car", "Car\Car.csproj", "{1E6D942F-6B14-4B69-95F1-D661F78ECB7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{003AA883-40F1-4ADE-8790-735B824F150D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RefBin", "RefBin", "{2F422414-048F-4296-95B7-558C36B635C4}"
+	ProjectSection(SolutionItems) = preProject
+		RefBin\3WheelMotorSignal.config.bak = RefBin\3WheelMotorSignal.config.bak
+		RefBin\713xapi.dll = RefBin\713xapi.dll
+		RefBin\APP_CONFIG.config.bak = RefBin\APP_CONFIG.config.bak
+		RefBin\CarSignal.config.bak = RefBin\CarSignal.config.bak
+		RefBin\cdc.dll = RefBin\cdc.dll
+		RefBin\DevComponents.DotNetBar2.dll = RefBin\DevComponents.DotNetBar2.dll
+		RefBin\DisplayTL.config.bak = RefBin\DisplayTL.config.bak
+		RefBin\DisplayTLSC.config.bak = RefBin\DisplayTLSC.config.bak
+		RefBin\DisplayYT.config.bak = RefBin\DisplayYT.config.bak
+		RefBin\GenCode128.dll = RefBin\GenCode128.dll
+		RefBin\Interop.SpeechLib.dll = RefBin\Interop.SpeechLib.dll
+		RefBin\Intro.rtf = RefBin\Intro.rtf
+		RefBin\Intro.txt = RefBin\Intro.txt
+		RefBin\JYSDK.dll = RefBin\JYSDK.dll
+		RefBin\m4playerApi.dll = RefBin\m4playerApi.dll
+		RefBin\Microsoft.Office.Interop.Excel.dll = RefBin\Microsoft.Office.Interop.Excel.dll
+		RefBin\MotorSignal.config.bak = RefBin\MotorSignal.config.bak
+		RefBin\test_video2.dll = RefBin\test_video2.dll
+		RefBin\TractorSignal.config.bak = RefBin\TractorSignal.config.bak
+		RefBin\WinIo.dll = RefBin\WinIo.dll
+		RefBin\WinIo.sys = RefBin\WinIo.sys
+		RefBin\WINIO.VXD = RefBin\WINIO.VXD
+		RefBin\牵引车_APP_CONFIG.config.bak = RefBin\牵引车_APP_CONFIG.config.bak
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{B0FDB8DB-9CCE-4AF3-A381-14BEF496AF1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LEDDisplay", "LEDDisplay\LEDDisplay.csproj", "{FA7FA10A-50AC-4FA9-8DEF-34989DE72BEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Video", "Video\Video.csproj", "{439926B5-5719-4B85-870E-AEF880D212B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZK", "ZK\ZK.csproj", "{8D694C9F-BCC5-4275-8E73-57CC30093BEF}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D27F55A-D857-43B0-84CE-FF57410BD0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D27F55A-D857-43B0-84CE-FF57410BD0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D27F55A-D857-43B0-84CE-FF57410BD0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D27F55A-D857-43B0-84CE-FF57410BD0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDAE0410-43C8-4E40-BF25-6942A36FB70C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDAE0410-43C8-4E40-BF25-6942A36FB70C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDAE0410-43C8-4E40-BF25-6942A36FB70C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDAE0410-43C8-4E40-BF25-6942A36FB70C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E6D942F-6B14-4B69-95F1-D661F78ECB7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6D942F-6B14-4B69-95F1-D661F78ECB7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6D942F-6B14-4B69-95F1-D661F78ECB7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6D942F-6B14-4B69-95F1-D661F78ECB7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{003AA883-40F1-4ADE-8790-735B824F150D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003AA883-40F1-4ADE-8790-735B824F150D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003AA883-40F1-4ADE-8790-735B824F150D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003AA883-40F1-4ADE-8790-735B824F150D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0FDB8DB-9CCE-4AF3-A381-14BEF496AF1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0FDB8DB-9CCE-4AF3-A381-14BEF496AF1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0FDB8DB-9CCE-4AF3-A381-14BEF496AF1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0FDB8DB-9CCE-4AF3-A381-14BEF496AF1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7FA10A-50AC-4FA9-8DEF-34989DE72BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7FA10A-50AC-4FA9-8DEF-34989DE72BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7FA10A-50AC-4FA9-8DEF-34989DE72BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7FA10A-50AC-4FA9-8DEF-34989DE72BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439926B5-5719-4B85-870E-AEF880D212B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439926B5-5719-4B85-870E-AEF880D212B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439926B5-5719-4B85-870E-AEF880D212B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439926B5-5719-4B85-870E-AEF880D212B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D694C9F-BCC5-4275-8E73-57CC30093BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D694C9F-BCC5-4275-8E73-57CC30093BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D694C9F-BCC5-4275-8E73-57CC30093BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D694C9F-BCC5-4275-8E73-57CC30093BEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

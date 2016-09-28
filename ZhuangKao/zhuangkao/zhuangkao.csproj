@@ -1,0 +1,344 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6682DBD1-C025-4DE3-AF68-A33A13D95C38}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zhuangkao</RootNamespace>
+    <AssemblyName>zhuangkao</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AviFile, Version=1.0.3168.15213, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=7.2.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\test\call-over\call-over\bin\Debug\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="GenCode128, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Interop.SpeechLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminXhpb_s_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminXhpb_s_Form.designer.cs">
+      <DependentUpon>AdminXhpb_s_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminXhpb_l_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminXhpb_l_Form.designer.cs">
+      <DependentUpon>AdminXhpb_l_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminXhqf_l_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminXhqf_l_Form.designer.cs">
+      <DependentUpon>AdminXhqf_l_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminXhqf_s_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminXhqf_s_Form.designer.cs">
+      <DependentUpon>AdminXhqf_s_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CAccessDatabase.cs" />
+    <Compile Include="Camera.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Camera.Designer.cs">
+      <DependentUpon>Camera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CarSignalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarSignalForm.Designer.cs">
+      <DependentUpon>CarSignalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CBmpFairy.cs" />
+    <Compile Include="CDatabase.cs" />
+    <Compile Include="CDisplaycomm.cs" />
+    <Compile Include="CDisplayData.cs" />
+    <Compile Include="CDisplayManager.cs" />
+    <Compile Include="CGanFairy.cs" />
+    <Compile Include="ChangePasswd_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePasswd_Form.Designer.cs">
+      <DependentUpon>ChangePasswd_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CHotKey.cs" />
+    <Compile Include="CHotkeyApp.cs" />
+    <Compile Include="CIDCardInfo.cs" />
+    <Compile Include="CImagePrintObjSet.cs" />
+    <Compile Include="CIO.cs" />
+    <Compile Include="CIOCard.cs" />
+    <Compile Include="CLineFairy.cs" />
+    <Compile Include="CLink.cs" />
+    <Compile Include="CLinkPool.cs" />
+    <Compile Include="CMonData.cs" />
+    <Compile Include="CMonitor.cs" />
+    <Compile Include="CMsSqlDatabase.cs" />
+    <Compile Include="CMyGlobal.cs" />
+    <Compile Include="CMyVideo.cs" />
+    <Compile Include="CNetClient.cs" />
+    <Compile Include="CNetData.cs" />
+    <Compile Include="CState14i_Che.cs" />
+    <Compile Include="COracleDatabase.cs" />
+    <Compile Include="CPrintContent.cs" />
+    <Compile Include="CPrintObjSet.cs" />
+    <Compile Include="CReadLacal.cs" />
+    <Compile Include="CReadRemote.cs" />
+    <Compile Include="CShowLinkState.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CState.cs" />
+    <Compile Include="CState0.cs" />
+    <Compile Include="CState1.cs" />
+    <Compile Include="CState10.cs" />
+    <Compile Include="CState11.cs" />
+    <Compile Include="CState11i.cs" />
+    <Compile Include="CState12.cs" />
+    <Compile Include="CState13.cs" />
+    <Compile Include="CState14.cs" />
+    <Compile Include="CState14i.cs" />
+    <Compile Include="CState14_che.cs" />
+    <Compile Include="CState15.cs" />
+    <Compile Include="CState16.cs" />
+    <Compile Include="CState17.cs" />
+    <Compile Include="CState2.cs" />
+    <Compile Include="CState3.cs" />
+    <Compile Include="CState4.cs" />
+    <Compile Include="CState4i.cs" />
+    <Compile Include="CState4_che.cs" />
+    <Compile Include="CState5.cs" />
+    <Compile Include="CState6.cs" />
+    <Compile Include="CState7.cs" />
+    <Compile Include="CState8.cs" />
+    <Compile Include="CState8_che.cs" />
+    <Compile Include="CState9.cs" />
+    <Compile Include="CStateEnd.cs" />
+    <Compile Include="CStudent.cs" />
+    <Compile Include="CTextPrintObjSet.cs" />
+    <Compile Include="CVoice.cs" />
+    <Compile Include="ExamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExamForm.Designer.cs">
+      <DependentUpon>ExamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gsjj_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gsjj_Form.Designer.cs">
+      <DependentUpon>Gsjj_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDataLinkObserve.cs" />
+    <Compile Include="IFairy.cs" />
+    <Compile Include="IMonObserve.cs" />
+    <Compile Include="Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_Form.Designer.cs">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Form.Designer.cs">
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleConfig.cs" />
+    <Compile Include="ModuleSettings.cs" />
+    <Compile Include="MonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonForm.designer.cs">
+      <DependentUpon>MonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mymd5.cs" />
+    <Compile Include="Print_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Print_form.Designer.cs">
+      <DependentUpon>Print_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminXhpb_s_Form.resx">
+      <DependentUpon>AdminXhpb_s_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminXhpb_l_Form.resx">
+      <DependentUpon>AdminXhpb_l_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminXhqf_l_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminXhqf_l_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminXhqf_s_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdminXhqf_s_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Camera.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Camera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarSignalForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CarSignalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePasswd_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChangePasswd_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gsjj_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Gsjj_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Main_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonForm.resx">
+      <DependentUpon>MonForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPrint_Form.resx">
+      <DependentUpon>SetPrint_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Setting_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetUser_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SetUser_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sound_Test_Form.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Sound_Test_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xhpb_Form_l.resx">
+      <DependentUpon>Xhpb_Form_l.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Xhpb_Form_s.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Xhpb_Form_s.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SetPrint_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPrint_Form.designer.cs">
+      <DependentUpon>SetPrint_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting_Form.Designer.cs">
+      <DependentUpon>Setting_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetUser_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetUser_Form.Designer.cs">
+      <DependentUpon>SetUser_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sound_Test_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sound_Test_Form.Designer.cs">
+      <DependentUpon>Sound_Test_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Speach.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="Xhpb_Form_l.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xhpb_Form_l.designer.cs">
+      <DependentUpon>Xhpb_Form_l.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Xhpb_Form_s.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Xhpb_Form_s.Designer.cs">
+      <DependentUpon>Xhpb_Form_s.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\002.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image015.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\图标.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

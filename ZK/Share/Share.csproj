@@ -1,0 +1,369 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D27F55A-D857-43B0-84CE-FF57410BD0CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cn.Youdundianzi.Share</RootNamespace>
+    <AssemblyName>Share</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.2.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefBin\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="GenCode128, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefBin\GenCode128.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SpeechLib, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefBin\Interop.SpeechLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CTestMonitor.cs" />
+    <Compile Include="CTestSettings.cs" />
+    <Compile Include="Exam\ExamResultMsg.cs" />
+    <Compile Include="Module\Candidate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\CandExamCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\CandidateQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\CandidateQuery.Designer.cs">
+      <DependentUpon>CandidateQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\PractiseCtrlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\PractiseCtrlPanel.Designer.cs">
+      <DependentUpon>PractiseCtrlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\ExamResultPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\ExamResultPanel.Designer.cs">
+      <DependentUpon>ExamResultPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\ICandidateInfoReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\LocalInputPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\LocalInputPanel.Designer.cs">
+      <DependentUpon>LocalInputPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\XYfrmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\XYfrmMessage.designer.cs">
+      <DependentUpon>XYfrmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\XYStudentinforPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\CandidateInfoPanel\XYStudentinforPanel.Designer.cs">
+      <DependentUpon>XYStudentinforPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\CKfxm.cs" />
+    <Compile Include="Module\ExamCtrlPanelModule\ExamCtrlPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\ExamCtrlPanelModule\ExamCtrlPanel.Designer.cs">
+      <DependentUpon>ExamCtrlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ExamCtrlPanelModule\ExamStatusDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\ExamCtrlPanelModule\ExamStatusDisplayPanel.Designer.cs">
+      <DependentUpon>ExamStatusDisplayPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\LoginModule\MD5.cs" />
+    <Compile Include="Module\ModelDisplayModule\BaseModelDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\ModelDisplayModule\BaseModelDisplayPanel.Designer.cs">
+      <DependentUpon>BaseModelDisplayPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ModelDisplayModule\CBmpFairy.cs" />
+    <Compile Include="Module\ModelDisplayModule\CDisplayManager.cs" />
+    <Compile Include="Module\ModelDisplayModule\CGanFairy.cs" />
+    <Compile Include="Module\ModelDisplayModule\CLineFairy.cs" />
+    <Compile Include="Module\ModelDisplayModule\IFairy.cs" />
+    <Compile Include="Module\LoginModule\CMyGlobal .cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\LoginModule\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\LoginModule\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\NetworkModule\CNetClient.cs" />
+    <Compile Include="Module\NetworkModule\CNetData.cs" />
+    <Compile Include="Module\NetworkModule\NetStudentinforPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\NetworkModule\NetStudentinforPanel.Designer.cs">
+      <DependentUpon>NetStudentinforPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\PrintModule\CImagePrintObjSet.cs" />
+    <Compile Include="Module\PrintModule\CPrintContent.cs" />
+    <Compile Include="Module\PrintModule\CPrintObjSet.cs" />
+    <Compile Include="Module\PrintModule\CTextPrintObjSet.cs" />
+    <Compile Include="Module\PrintModule\PrintSetupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\PrintModule\PrintSetupPanel.Designer.cs">
+      <DependentUpon>PrintSetupPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\PrintModule\Print_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\PrintModule\Print_form.designer.cs">
+      <DependentUpon>Print_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\PrintModule\SetPrint_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\PrintModule\SetPrint_Form.designer.cs">
+      <DependentUpon>SetPrint_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ScoreModule\DALStudent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\ScoreModule\DB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\ScoreModule\FormScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\ScoreModule\FormScore.Designer.cs">
+      <DependentUpon>FormScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\frmMessageBox.Designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\ScoreModule\NetDALCandidate.cs" />
+    <Compile Include="Module\ScoreModule\XYDALCandiidate.cs" />
+    <Compile Include="Module\SetupModule\CSetup.cs" />
+    <Compile Include="Module\SetupModule\ExamSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\SetupModule\ExamSetup.Designer.cs">
+      <DependentUpon>ExamSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SetupModule\GXSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\SetupModule\GXSetup.Designer.cs">
+      <DependentUpon>GXSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SetupModule\GXTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\SetupModule\GXTest.Designer.cs">
+      <DependentUpon>GXTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SignalDisplayModule\SignalDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\SignalDisplayModule\SignalDisplay.Designer.cs">
+      <DependentUpon>SignalDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SoundModule\CVoice.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\SoundModule\SoundCtrl.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\SoundModule\Sound_Test_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\SoundModule\Sound_Test_Form.designer.cs">
+      <DependentUpon>Sound_Test_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SoundModule\Speach.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Signal\JKY\CIO.cs" />
+    <Compile Include="Signal\JKY\CJKYBaseMonitor.cs" />
+    <Compile Include="Signal\JKY\CJKYMonData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util\Sim5G7X4C\CHotkeyApp.cs" />
+    <Compile Include="Util\Sim5G7X4C\CSimIO.cs" />
+    <Compile Include="Util\Sim5G7X4C\SimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\Sim5G7X4C\SimForm.Designer.cs">
+      <DependentUpon>SimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Sim6G8X4C\CHotkeyApp.cs" />
+    <Compile Include="Util\Sim6G8X4C\CSimIO.cs" />
+    <Compile Include="Util\Sim6G8X4C\SimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\Sim6G8X4C\SimForm.Designer.cs">
+      <DependentUpon>SimForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Sim6G6X4C\CHotkeyApp.cs" />
+    <Compile Include="Util\CSettings.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Sim6G6X4C\CSimIO.cs" />
+    <Compile Include="Util\Sim6G6X4C\SimForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Util\Sim6G6X4C\SimForm.Designer.cs">
+      <DependentUpon>SimForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{B0FDB8DB-9CCE-4AF3-A381-14BEF496AF1B}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Module\CandidateInfoPanel\CandidateQuery.resx">
+      <DependentUpon>CandidateQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\CandidateInfoPanel\PractiseCtrlPanel.resx">
+      <DependentUpon>PractiseCtrlPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\CandidateInfoPanel\ExamResultPanel.resx">
+      <DependentUpon>ExamResultPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\CandidateInfoPanel\LocalInputPanel.resx">
+      <DependentUpon>LocalInputPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\CandidateInfoPanel\XYfrmMessage.resx">
+      <DependentUpon>XYfrmMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\CandidateInfoPanel\XYStudentinforPanel.resx">
+      <DependentUpon>XYStudentinforPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\ExamCtrlPanelModule\ExamCtrlPanel.resx">
+      <DependentUpon>ExamCtrlPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\ExamCtrlPanelModule\ExamStatusDisplayPanel.resx">
+      <DependentUpon>ExamStatusDisplayPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\LoginModule\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\ModelDisplayModule\BaseModelDisplayPanel.resx">
+      <DependentUpon>BaseModelDisplayPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\NetworkModule\NetStudentinforPanel.resx">
+      <DependentUpon>NetStudentinforPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\PrintModule\PrintSetupPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrintSetupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\PrintModule\SetPrint_Form.resx">
+      <DependentUpon>SetPrint_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\ScoreModule\FormScore.resx">
+      <DependentUpon>FormScore.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\SetupModule\ExamSetup.resx">
+      <DependentUpon>ExamSetup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\SetupModule\GXSetup.resx">
+      <DependentUpon>GXSetup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\SetupModule\GXTest.resx">
+      <DependentUpon>GXTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\SignalDisplayModule\SignalDisplay.resx">
+      <DependentUpon>SignalDisplay.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\SoundModule\Sound_Test_Form.resx">
+      <DependentUpon>Sound_Test_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\Sim5G7X4C\SimForm.resx">
+      <DependentUpon>SimForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\Sim6G8X4C\SimForm.resx">
+      <DependentUpon>SimForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Util\Sim6G6X4C\SimForm.resx">
+      <DependentUpon>SimForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

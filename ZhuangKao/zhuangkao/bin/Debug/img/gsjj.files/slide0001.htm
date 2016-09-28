@@ -1,0 +1,507 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+xmlns:oa="urn:schemas-microsoft-com:office:activation"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 12">
+<link id=Main-File rel=Main-File href="../gsjj.htm">
+<link rel=Preview href=preview.wmf>
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+p\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+v\:textbox {display:none;}
+</style>
+<![endif]-->
+<title>幻灯片 1</title>
+<meta name=Description content=2008-07-11>
+<link rel=Stylesheet href="master27_stylesheet.css">
+<![if !ppt]>
+<style media=print>
+<!--.sld
+	{left:0px !important;
+	width:6.0in !important;
+	height:4.5in !important;
+	font-size:103% !important;}
+-->
+</style>
+<script><!--
+function LoadSld()
+{
+	var sld=GetObj("SlideObj")
+	if( !g_supportsPPTHTML ) {
+		sld.style.visibility="visible"
+		return
+	}
+	if( MakeNotesVis() ) return
+	runAnimations = _InitAnimations();
+	if( IsWin("PPTSld") )
+		parent.SldUpdated(GetSldId())
+	g_origSz=parseInt(SlideObj.style.fontSize)
+	g_origH=sld.style.posHeight
+	g_origW=sld.style.posWidth
+	g_scaleHyperlinks=(document.all.tags("AREA").length>0)
+	if( g_scaleHyperlinks )
+		InitHLinkArray()
+	if( g_scaleInFrame||(IsWin("PPTSld") && parent.IsFullScrMode() ) )
+		document.body.scroll="no"
+	_RSW()
+	if( IsWin("PPTSld") && parent.IsFullScrMode() )
+		FullScrInit();
+	
+	MakeSldVis();
+	
+	if( runAnimations )
+	{
+		if( document.all("NSPlay") )
+			document.all("NSPlay").autoStart = false;
+		if( sld.filters && sld.filters.revealtrans )
+			setTimeout( "document.body.start()", sld.filters.revealtrans.duration * 1000 );
+		else
+			document.body.start();
+	}
+}
+function MakeSldVis()
+{
+	var fTrans=g_showAnimation && SldHasTrans()
+	if( fTrans )
+	{
+		if( g_bgSound ) {
+			idx=g_bgSound.indexOf(",");
+			pptSound.src=g_bgSound.substr( 0, idx );
+			pptSound.loop= -(parseInt(g_bgSound.substr(idx+1)));
+		}
+		SlideObj.filters.revealtrans.Apply()
+    }
+	SlideObj.style.visibility="visible"
+	if( fTrans )
+		SlideObj.filters.revealtrans.Play()
+}
+function MakeNotesVis()
+{
+	if( !IsNts() ) return false
+	SlideObj.style.display="none"
+	nObj = document.all.item("NotesObj")
+	parent.SetHasNts(0)
+	if( nObj ) {
+		nObj.style.display=""
+		parent.SetHasNts(1)
+	}
+	return 1
+}
+function ChkAutoAdv()
+{
+	if(SldHasTrans())
+		SlideObj.onfilterchange=AutoAdv
+	else
+		AutoAdv()
+}
+function AutoAdv()
+{
+	if(!IsWin("PPTSld") || !gUseSldTimings )return
+	var sld=GetCurSld()
+	if( (sld.mAdvDelay>0) && !parent.IsFramesMode() )
+		setTimeout("parent.GoToNextSld()",sld.mAdvDelay)
+}
+function GetObj(id)
+{
+	if(g_supportsPPTHTML) return document.all(id);
+	else return document.getElementById(id);
+}
+function SldHasTrans() { return SlideObj.style.filter != ""; }
+function GetSldId() { return sId=location.href.substring(location.href.lastIndexOf('/')+1) }
+function HideMenu() { if( frames["PPTSld"] && PPTSld.document.all.item("ctxtmenu") && PPTSld.ctxtmenu.style.display!="none" ) { PPTSld.ctxtmenu.style.display='none'; return true } return false }
+function IsWin( name ) { return window.name == name }
+function IsNts() { return IsWin("PPTNts") }
+function IsSldOrNts() { return( IsWin("PPTSld")||IsWin("PPTNts") ) }
+function SupportsPPTAnimation() { return( navigator.platform == "Win32" && navigator.appVersion.indexOf("Windows")>0 ) }
+function SupportsPPTHTML()
+{
+	var appVer=navigator.appVersion, msie=appVer.indexOf("MSIE "), ver=0
+	if( msie >= 0 )
+		ver=parseFloat( appVer.substring( msie+5, appVer.indexOf(";",msie) ) )
+	else
+		ver=parseInt(appVer)
+	return( ver >= 4 && msie >= 0 )
+}
+function _RSW()
+{
+	if( !g_supportsPPTHTML || IsNts() ||
+	  ( !g_scaleInFrame && (!IsWin("PPTSld") || !parent.IsFullScrMode()) ) )
+		return
+        var padding=0;
+        if( IsWin("PPTSld") && parent.IsFramesMode() ) padding=6
+	cltWidth=document.body.clientWidth-padding
+	cltHeight=document.body.clientHeight-padding
+	factor=(1.0*cltWidth)/g_origW
+	if( cltHeight < g_origH*factor )
+		factor=(1.0*cltHeight)/g_origH
+	newSize = g_origSz * factor
+	if( newSize < 1 ) newSize=1
+	s=SlideObj.style
+	s.fontSize=newSize+"px"
+	s.posWidth=g_origW*factor
+	s.posHeight=g_origH*factor
+	s.posLeft=(cltWidth-s.posWidth+padding)/2
+	s.posTop=(cltHeight-s.posHeight+padding)/2
+	if( g_scaleHyperlinks )
+		ScaleHyperlinks( factor )
+}
+function _InitAnimations()
+{
+	animRuntimeInstalled = ''+document.body.localTime != 'undefined';
+	isFullScreen = (window.name == "PPTSld") && !parent.IsFramesMode();
+	g_animUseRuntime = g_showAnimation && animRuntimeInstalled && !(isFullScreen && parent.IsSldVisited());
+	if( g_animUseRuntime ) {
+		collSeq = document.all.tags("seq");
+		if( collSeq != null ) {
+			for(ii=0;ii<collSeq.length;ii++) {
+				if( collSeq[ii].getAttribute( "p:nodeType" ) == "mainSeq" ) {
+					g_animMainSequence = collSeq[ii];
+					break;
+				}
+			}
+		}
+		if( g_animItemsToHide && document.body.playAnimations != false ) {
+			for(jj = 0; jj < g_animItemsToHide.length; jj++) {
+				if( hideObj = GetObj(g_animItemsToHide[jj]) )
+					hideObj.runtimeStyle.visibility="hidden";
+			}
+		}
+		if( g_animInteractiveItems ){
+			for(jj = 0; jj < g_animInteractiveItems.length; jj++) {
+				if( triggerObj = GetObj(g_animInteractiveItems[jj]) )
+					triggerObj.runtimeStyle.cursor="hand";
+			}
+		}
+		if( gUseSldTimings && ''+g_animSlideTime != 'undefined' ) {
+			adjustedTime = document.body.calculateAutoAdvanceTimes( g_animSlideTime, g_animEffectTimings );
+			if( IsWin("PPTSld") && adjustedTime != g_animSlideTime ) {
+			   var sld = GetCurSld();
+			   sld.mAdvDelay = adjustedTime * 1000;
+			}
+		}
+	}
+	return g_animUseRuntime;
+}
+
+var g_supportsPPTHTML = SupportsPPTHTML(), g_scaleInFrame = 1, gId="", g_bgSound="",
+    g_scaleHyperlinks = false, g_allowAdvOnClick = 1, g_showInBrowser = 0, gLoopCont = 0, gUseSldTimings = 1;
+var g_showAnimation = g_supportsPPTHTML && SupportsPPTAnimation() && g_showInBrowser;
+var g_animManager = null;
+var g_animUseRuntime = false;
+var g_animItemsToHide, g_animInteractiveItems, g_animSlideTime;
+var g_animMainSequence = null;
+
+//--></script><!--[if vml]><script>g_vml = 1;
+</script><![endif]--><![endif]><o:shapelayout v:ext="edit">
+ <o:idmap v:ext="edit" data="10"/>
+</o:shapelayout>
+</head>
+
+<body lang=ZH-CN style='margin:0px;background-color:white' onresize="_RSW()"
+onload="LoadSld()">
+
+<div id=SlideObj class=sld style='position:absolute;top:0px;left:0px;
+width:554px;height:415px;font-size:16px;background-color:white;clip:rect(0%, 101%, 101%, 0%);
+visibility:hidden'><p:slide coordsize="720,540"
+ colors="#ffffff,#000000,#fbeec9,#4e3b30,#f0a22e,#a5644e,#ad1f1f,#ffc42f"
+ masterhref="master27.xml">
+ <p:shaperange href="master27.xml#_x0000_s2049"/><![if !vml]><img
+ src="master27_background.gif" v:shapes="_x0000_s2049" style='position:absolute;
+ top:0%;left:0%;width:100.0%;height:100.0%'><![endif]><![if !ppt]><p:shaperange
+  href="master27.xml#直接连接符_x0020_12"/><![if !vml]><img border=0
+ v:shapes="直接连接符_x0020_12,_x0000_s2050,_x0000_s2051" src="master27_image005.gif"
+ style='position:absolute;top:77.83%;left:5.59%;width:94.76%;height:.72%'><![endif]><![endif]><v:rect
+  id="_x0000_s10242" style='position:absolute;left:95.625pt;top:138.75pt;
+  width:506.25pt;height:356.25pt;visibility:visible;mso-wrap-style:square;
+  v-text-anchor:middle' o:gfxdata="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
+" filled="f" stroked="f">
+  <v:textbox style='mso-rotate-with-shape:t;mso-fit-shape-to-text:t'/>
+ </v:rect>
+ <div v:shape="_x0000_s10242">
+ <div class=O1 style='mso-margin-left-alt:468'></div>
+ <div class=O2 style='mso-margin-left-alt:720'></div>
+ <div class=O3 style='mso-margin-left-alt:1008'></div>
+ <div class=O4 style='mso-margin-left-alt:1296'></div>
+ <div class=O style='mso-line-spacing:"150 0 0";mso-text-indent-alt:284'><span
+ style='position:absolute;top:28.67%;left:19.13%;width:74.9%;height:3.13%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%'>西安优盾电子技术应用有限公司主要从事计算机软硬件项目开发</span></span></span><span
+ style='position:absolute;top:33.97%;left:14.25%;width:80.14%;height:3.13%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%'>、网络集成、智能监控的高新技术企业。位于西安市北经济开发区。</span></span></span><span
+ style='position:absolute;top:39.27%;left:14.25%;width:80.14%;height:3.13%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%'>主要从事机动车驾驶员培训系统、无纸化考试系统、电子桩考系统、</span></span></span><span
+ style='position:absolute;top:44.57%;left:14.25%;width:80.14%;height:3.13%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%'>电子路考系统、机动车驾驶员受理系统、驾驶员档案管理系统、驾驶</span></span></span><span
+ style='position:absolute;top:50.12%;left:14.25%;width:77.43%;height:3.13%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%'>员考试身份识别系统等相关产品的研发、生产、销售、售后工作。</span></span><span
+ lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-hansi-font-family:Arial;font-size:89%;display:none'>&#13;</span></span></div>
+ <div class=O style='mso-line-spacing:"150 0 0";mso-text-indent-alt:284;
+ mso-char-wrap:0;mso-kinsoku-overflow:0'><span style='position:absolute;
+ top:54.93%;left:19.13%;width:74.9%;height:3.61%'><span style='mso-bidi-font-family:
+ Arial'><span lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+ mso-fareast-font-family:宋体;mso-hansi-font-family:"Times New Roman";font-size:
+ 89%'>我公司从事驾驶员各类计算机控制的考试系统研发工作已有</span></span><span style='mso-bidi-font-family:
+ Arial'><span lang=EN-US style='font-family:"Times New Roman";mso-ascii-font-family:
+ "Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:"Times New Roman";
+ font-size:89%;mso-fareast-language:ZH-CN'>20</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-ansi-language:EN-US'>多</span></span></span><span
+ style='position:absolute;top:60.24%;left:14.25%;width:80.14%;height:3.61%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-ansi-language:EN-US'>年的经验。全国</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:"Times New Roman";
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-fareast-language:ZH-CN'>20</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-ansi-language:EN-US'>多个地区车管所使用我公司研发生产的各类产品，</span></span></span><span
+ style='position:absolute;top:66.02%;left:14.25%;width:80.14%;height:3.13%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-ansi-language:EN-US'>先进的技术、稳定的质量、优质的售后服务让我们和客户建立了深厚</span></span></span><span
+ style='position:absolute;top:71.32%;left:14.25%;width:68.41%;height:3.13%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-ansi-language:EN-US'>的合作友谊。</span></span><span
+ lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-hansi-font-family:Arial;font-size:89%;mso-ansi-language:EN-US;
+ display:none'>&#13;</span></span></div>
+ <div class=O style='mso-line-spacing:"150 0 0";mso-text-indent-alt:284;
+ mso-char-wrap:0;mso-kinsoku-overflow:0'><span style='position:absolute;
+ top:76.38%;left:19.13%;width:71.29%;height:3.61%'><span style='mso-bidi-font-family:
+ Arial'><span lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+ mso-fareast-font-family:宋体;mso-hansi-font-family:"Times New Roman";font-size:
+ 89%;mso-ansi-language:EN-US'>我公司秉承</span></span><span style='mso-bidi-font-family:
+ Arial'><span lang=ZH-CN style='font-family:Arial;mso-ascii-font-family:Arial;
+ mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:89%;
+ mso-ansi-language:EN-US'>“</span></span><span style='mso-bidi-font-family:
+ Arial'><span lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:"Times New Roman";
+ mso-fareast-font-family:宋体;mso-hansi-font-family:"Times New Roman";font-size:
+ 89%;mso-ansi-language:EN-US'>细节决定品质，用户需求至上</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:89%;mso-ansi-language:EN-US'>”</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-ansi-language:EN-US'>的公司宗旨，遵循</span></span></span><span
+ style='position:absolute;top:81.68%;left:14.25%;width:81.76%;height:3.61%'><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:"Times New Roman";
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-fareast-language:ZH-CN'>ISO9001</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-ansi-language:EN-US'>质量标准体系严格对产品质量、售后服务把关，以科学、严谨</span></span></span><span
+ style='position:absolute;top:87.46%;left:14.25%;width:68.41%;height:3.13%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:"Times New Roman";mso-fareast-font-family:宋体;mso-hansi-font-family:
+ "Times New Roman";font-size:89%;mso-ansi-language:EN-US'>、诚信、敬业的态度服务于我们的客户。</span></span><span
+ lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-hansi-font-family:Arial;font-size:89%;mso-ansi-language:EN-US;
+ mso-special-format:lastCR;display:none'>&#13;</span></span></div>
+ </div>
+ <v:shape id="图片_x0020_4" o:spid="_x0000_s10243" type="#_x0000_t75" alt="002.jpg"
+  style='position:absolute;left:45pt;top:22.5pt;width:260.875pt;height:88.625pt;
+  visibility:visible;mso-wrap-style:square'>
+  <v:imagedata src="slide0001_image006.jpg" o:title="002"/>
+  <v:path arrowok="t"/>
+ </v:shape><![if !vml]><img border=0 v:shapes="图片_x0020_4"
+ src="slide0001_image006.jpg" alt=002.jpg style='position:absolute;top:4.09%;
+ left:6.31%;width:36.28%;height:16.38%'><![endif]><v:rect id="_x0000_s10244"
+  style='position:absolute;left:281.25pt;top:5.625pt;width:438.75pt;height:145.375pt;
+  visibility:visible;mso-wrap-style:square;v-text-anchor:middle' filled="f"
+  stroked="f">
+  <v:textbox style='mso-rotate-with-shape:t;mso-fit-shape-to-text:t'/>
+ </v:rect>
+ <div v:shape="_x0000_s10244">
+ <div class=O1 style='mso-margin-left-alt:468'></div>
+ <div class=O2 style='mso-margin-left-alt:720'></div>
+ <div class=O3 style='mso-margin-left-alt:1008'></div>
+ <div class=O4 style='mso-margin-left-alt:1296'></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:1.92%;left:44.94%;width:54.15%;height:2.65%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%'>公司地址：西安市未央路</span></span><span style='mso-bidi-font-family:
+ Arial'><span lang=EN-US style='font-family:Arial;mso-ascii-font-family:Arial;
+ mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ mso-fareast-language:ZH-CN'>111-1</span></span><span style='mso-bidi-font-family:
+ Arial'><span lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:Arial;
+ mso-fareast-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ mso-ansi-language:EN-US'>号</span></span><span lang=ZH-CN style='font-family:
+ 宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-bidi-font-family:
+ 宋体;mso-hansi-font-family:Arial;font-size:67%;color:navy;mso-ansi-language:
+ EN-US;display:none'><b>&#13;</b></span></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:4.57%;left:44.94%;width:54.15%;height:2.65%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>邮政编码：</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'>710064</span></span><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-bidi-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ color:navy;mso-fareast-language:ZH-CN;display:none'><b>&#13;</b></span></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:7.22%;left:44.94%;width:54.15%;height:2.65%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>联系电话：（</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'>029</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>）</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'>86269756</span></span><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-bidi-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ color:navy;mso-fareast-language:ZH-CN;display:none'><b>&#13;</b></span></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:10.12%;left:44.94%;width:63.71%;height:2.65%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>售后服务电话（</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'>24</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>小时）：</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'>13909216625&nbsp;<span
+ style='mso-spacerun:yes'>&nbsp; </span>13891971199<span
+ style='mso-spacerun:yes'>&nbsp; </span>13849176996</span></span><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-bidi-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ color:navy;mso-fareast-language:ZH-CN;display:none'><b>&#13;</b></span></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:12.77%;left:44.94%;width:54.15%;height:2.65%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>传真：（</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'>029</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>）</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'>86269756</span></span><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-bidi-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ color:navy;mso-fareast-language:ZH-CN;display:none'><b>&#13;</b></span></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:15.42%;left:44.94%;width:54.15%;height:2.4%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>联系人：刘雁城</span></span><span
+ lang=ZH-CN style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-bidi-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ color:navy;mso-ansi-language:EN-US;display:none'><b>&#13;</b></span></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:18.07%;left:44.94%;width:54.15%;height:2.65%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>网址：</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'>www.youdundianzi.com</span></span><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-bidi-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ color:navy;mso-fareast-language:ZH-CN;display:none'><b>&#13;</b></span></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:20.72%;left:44.94%;width:54.15%;height:2.65%'><span
+ style='mso-bidi-font-family:Arial'><span lang=ZH-CN style='font-family:宋体;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-ansi-language:EN-US'>邮箱：</span></span><span
+ style='mso-bidi-font-family:Arial'><span lang=EN-US style='font-family:Arial;
+ mso-ascii-font-family:Arial;mso-fareast-font-family:宋体;mso-hansi-font-family:
+ Arial;font-size:67%;mso-fareast-language:ZH-CN'><p:onmouseclick
+  hyperlinktype="url" href="mailto:ly622@sian.com"/><a
+ href="mailto:ly622@sian.com" target="_parent"
+ onclick="window.event.cancelBubble=true;">ly622@sian.com</a></span></span><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-bidi-font-family:宋体;mso-hansi-font-family:Arial;font-size:67%;
+ color:navy;mso-fareast-language:ZH-CN;display:none'><b>&#13;</b></span></div>
+ <div class=O style='mso-text-indent-alt:284;mso-char-wrap:0;mso-kinsoku-overflow:
+ 0;position:absolute;top:23.61%;left:44.94%;width:54.15%;height:3.61%'><span
+ lang=EN-US style='font-family:宋体;mso-ascii-font-family:Arial;mso-fareast-font-family:
+ 宋体;mso-hansi-font-family:Arial;mso-fareast-language:ZH-CN;mso-special-format:
+ lastCR;display:none'>&#13;</span></div>
+ </div>
+</p:slide></div>
+
+</body>
+
+</html>

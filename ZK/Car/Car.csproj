@@ -1,0 +1,204 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1E6D942F-6B14-4B69-95F1-D661F78ECB7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Car</RootNamespace>
+    <AssemblyName>Car</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exam\ITractorStateManager.cs" />
+    <Compile Include="Exam\ICarStateManager.cs" />
+    <Compile Include="Exam\State\TractorState\BaseState.cs" />
+    <Compile Include="Exam\State\TractorState\B1State.cs" />
+    <Compile Include="Exam\State\TractorState\B2State.cs" />
+    <Compile Include="Exam\State\TractorState\B3State.cs" />
+    <Compile Include="Exam\State\TractorState\B4State.cs" />
+    <Compile Include="Exam\State\TractorState\B5State.cs" />
+    <Compile Include="Exam\State\TractorState\B6State.cs" />
+    <Compile Include="Exam\State\TractorState\B7State.cs" />
+    <Compile Include="Exam\State\TractorState\B8State.cs" />
+    <Compile Include="Exam\State\TractorState\B7_2State.cs" />
+    <Compile Include="Exam\State\TractorState\F7_2State.cs" />
+    <Compile Include="Exam\State\TractorState\FBState.cs" />
+    <Compile Include="Exam\State\TractorState\F8State.cs" />
+    <Compile Include="Exam\State\TractorState\F7State.cs" />
+    <Compile Include="Exam\State\TractorState\F6State.cs" />
+    <Compile Include="Exam\State\TractorState\F5State.cs" />
+    <Compile Include="Exam\State\TractorState\F4State.cs" />
+    <Compile Include="Exam\State\TractorState\F3State.cs" />
+    <Compile Include="Exam\State\TractorState\F2State.cs" />
+    <Compile Include="Exam\State\TractorState\TractorStateManager.cs" />
+    <Compile Include="Exam\State\TractorState\F1State.cs" />
+    <Compile Include="Exam\State\TractorState\IdleState.cs" />
+    <Compile Include="Exam\State\TractorState\JSState.cs" />
+    <Compile Include="Exam\State\TractorState\KSState.cs" />
+    <Compile Include="Exam\State\TractorState\SampleState.cs" />
+    <Compile Include="Exam\State\PureCarState\BaseState.cs" />
+    <Compile Include="Exam\State\PureCarState\CarStateManager.cs" />
+    <Compile Include="Exam\State\PureCarState\CK34State.cs" />
+    <Compile Include="Exam\State\PureCarState\CK4SState.cs" />
+    <Compile Include="Exam\State\PureCarState\CK4State.cs" />
+    <Compile Include="Exam\State\PureCarState\CKF4State.cs" />
+    <Compile Include="Exam\State\PureCarState\CKL4State.cs" />
+    <Compile Include="Exam\State\PureCarState\DK12State.cs" />
+    <Compile Include="Exam\State\PureCarState\DK24State.cs" />
+    <Compile Include="Exam\State\PureCarState\DK4SState.cs" />
+    <Compile Include="Exam\State\PureCarState\DK4State.cs" />
+    <Compile Include="Exam\State\PureCarState\DKL4State.cs" />
+    <Compile Include="Exam\State\PureCarState\DKTOState.cs" />
+    <Compile Include="Exam\State\PureCarState\IdleState.cs" />
+    <Compile Include="Exam\State\PureCarState\JK24State.cs" />
+    <Compile Include="Exam\State\PureCarState\JK32State.cs" />
+    <Compile Include="Exam\State\PureCarState\JK4SState.cs" />
+    <Compile Include="Exam\State\PureCarState\JK4State.cs" />
+    <Compile Include="Exam\State\PureCarState\JKL4State.cs" />
+    <Compile Include="Exam\State\PureCarState\JKTOState.cs" />
+    <Compile Include="Exam\State\PureCarState\JSState.cs" />
+    <Compile Include="Exam\State\PureCarState\KSState.cs" />
+    <Compile Include="Exam\State\PureCarState\SampleState.cs" />
+    <Compile Include="Exam\State\PureCarState\XCK14State.cs" />
+    <Compile Include="Exam\State\PureCarState\XCK24State.cs" />
+    <Compile Include="Exam\State\PureCarState\XCK4SState.cs" />
+    <Compile Include="Exam\State\PureCarState\XCK4State.cs" />
+    <Compile Include="Exam\State\PureCarState\XCKEState.cs" />
+    <Compile Include="Exam\State\PureCarState\XCKL4State.cs" />
+    <Compile Include="Exam\State\PureCarState\YK1BState.cs" />
+    <Compile Include="Exam\State\PureCarState\YK1FState.cs" />
+    <Compile Include="Exam\State\PureCarState\YK1SState.cs" />
+    <Compile Include="Exam\State\PureCarState\YK2BState.cs" />
+    <Compile Include="Exam\State\PureCarState\YK2FState.cs" />
+    <Compile Include="Exam\State\PureCarState\YK2SState.cs" />
+    <Compile Include="Exam\State\PureCarState\YK3SState.cs" />
+    <Compile Include="Exam\State\PureCarState\YK4SState.cs" />
+    <Compile Include="Exam\State\ZKState\BaseState.cs" />
+    <Compile Include="Exam\State\ZKState\CK34State.cs" />
+    <Compile Include="Exam\State\ZKState\CK43State.cs" />
+    <Compile Include="Exam\State\ZKState\CK44State.cs" />
+    <Compile Include="Exam\State\ZKState\CK84State.cs" />
+    <Compile Include="Exam\State\ZKState\CKEState.cs" />
+    <Compile Include="Exam\State\ZKState\DK48State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\ZKState\XCKEState.cs" />
+    <Compile Include="Exam\State\ZKState\JKL4State.cs" />
+    <Compile Include="Exam\State\ZKState\JK74State.cs" />
+    <Compile Include="Exam\State\ZKState\DK11State.cs" />
+    <Compile Include="Exam\State\ZKState\DK12State.cs" />
+    <Compile Include="Exam\State\ZKState\DK24State.cs" />
+    <Compile Include="Exam\State\ZKState\DKL4State.cs" />
+    <Compile Include="Exam\State\ZKState\DK47State.cs" />
+    <Compile Include="Exam\State\ZKState\DK74State.cs" />
+    <Compile Include="Exam\State\ZKState\DK77State.cs" />
+    <Compile Include="Exam\State\ZKState\IdleState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\ZKState\JK24State.cs" />
+    <Compile Include="Exam\State\ZKState\JK32State.cs" />
+    <Compile Include="Exam\State\ZKState\JK47State.cs" />
+    <Compile Include="Exam\State\ZKState\JK48State.cs" />
+    <Compile Include="Exam\State\ZKState\JK77State.cs" />
+    <Compile Include="Exam\State\ZKState\JK8TOState.cs" />
+    <Compile Include="Exam\State\ZKState\JKTOState.cs" />
+    <Compile Include="Exam\State\ZKState\JSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\ZKState\KSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\ZKState\SampleState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\CarBaseState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\ZKState\CarStateManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\CarSignalTranslator.cs" />
+    <Compile Include="Exam\State\ZKState\XCK14State.cs" />
+    <Compile Include="Exam\State\ZKState\XCK41State.cs" />
+    <Compile Include="Exam\State\ZKState\XCK4EState.cs" />
+    <Compile Include="Exam\State\ZKState\XCK74State.cs" />
+    <Compile Include="Exam\State\ZKState\XCKH2State.cs" />
+    <Compile Include="Exam\State\ZKState\XCKL2State.cs" />
+    <Compile Include="Exam\State\ZKState\YK27State.cs" />
+    <Compile Include="Exam\State\ZKState\YK771State.cs" />
+    <Compile Include="Exam\State\ZKState\YK772State.cs" />
+    <Compile Include="Exam\State\ZKState\YK781State.cs" />
+    <Compile Include="Exam\State\ZKState\YK782State.cs" />
+    <Compile Include="Exam\State\ZKState\YK87State.cs" />
+    <Compile Include="Exam\State\ZKState\YK88State.cs" />
+    <Compile Include="Exam\State\ZKState\YKH28State.cs" />
+    <Compile Include="Exam\State\ZKState\YKH2State.cs" />
+    <Compile Include="Exam\State\ZKState\YKL28State.cs" />
+    <Compile Include="Exam\State\ZKState\YKL2State.cs" />
+    <Compile Include="Module\ModelDisplay\CarModelDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\ModelDisplay\CarSignalModelDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\ModelDisplay\TractorModelDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signal\CarMonitor.cs" />
+    <Compile Include="Signal\TractorMonitor.cs" />
+    <Compile Include="Signal\NewCarMonitor.cs" />
+    <Compile Include="Util\CarSignalSettings.cs" />
+    <Compile Include="Util\TractorSignalSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Share\Share.csproj">
+      <Project>{8D27F55A-D857-43B0-84CE-FF57410BD0CB}</Project>
+      <Name>Share</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)$(OutDir)$(TargetFileName) $(SolutionDir)RefBin\ /E /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>

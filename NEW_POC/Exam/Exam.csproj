@@ -1,0 +1,143 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{02256FB2-435B-4EAF-8FA2-A47D672264A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Exam</RootNamespace>
+    <AssemblyName>Exam</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exam.cs" />
+    <Compile Include="ExamResultMsg.cs" />
+    <Compile Include="SignalTranslater\BaseExamTranslator.cs" />
+    <Compile Include="IExamEventHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IResultMessage.cs" />
+    <Compile Include="IStateManager.cs" />
+    <Compile Include="IState.cs" />
+    <Compile Include="ITranslater.cs" />
+    <Compile Include="SignalTranslater\MotorSignalTranslator.cs" />
+    <Compile Include="StateManager.cs" />
+    <Compile Include="State\CState.cs" />
+    <Compile Include="State\IMotorStateManager.cs" />
+    <Compile Include="State\MotorState\C5State.cs" />
+    <Compile Include="State\MotorState\IdleState.cs" />
+    <Compile Include="State\MotorState\JSState.cs" />
+    <Compile Include="State\MotorState\KSState.cs" />
+    <Compile Include="State\MotorState\MotorBaseState.cs" />
+    <Compile Include="State\MotorState\MotorStateManager.cs" />
+    <Compile Include="State\MotorState\SampleState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="State\MotorState\Y1State.cs" />
+    <Compile Include="State\MotorState\YState.cs" />
+    <Compile Include="State\MotorState\Z1State.cs" />
+    <Compile Include="State\MotorState\ZState.cs" />
+    <Compile Include="IExamObserver.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="State\XA2WMotorState\C5State.cs" />
+    <Compile Include="State\XA2WMotorState\IdleState.cs" />
+    <Compile Include="State\XA2WMotorState\JSState.cs" />
+    <Compile Include="State\XA2WMotorState\KSState.cs" />
+    <Compile Include="State\XA2WMotorState\MotorBaseState.cs" />
+    <Compile Include="State\XA2WMotorState\MotorStateManager.cs" />
+    <Compile Include="State\XA2WMotorState\SampleState.cs" />
+    <Compile Include="State\XA2WMotorState\Y1State.cs" />
+    <Compile Include="State\XA2WMotorState\Y2State.cs" />
+    <Compile Include="State\XA2WMotorState\YState.cs" />
+    <Compile Include="State\XA2WMotorState\Z1State.cs" />
+    <Compile Include="State\XA2WMotorState\Z2State.cs" />
+    <Compile Include="State\XA2WMotorState\ZState.cs" />
+    <Compile Include="State\XA2WMotorState\ZWJSState.cs" />
+    <Compile Include="State\XA2WMotorState\ZWKSState.cs" />
+    <Compile Include="State\XA3WMotorState\C5State.cs" />
+    <Compile Include="State\XA3WMotorState\IdleState.cs" />
+    <Compile Include="State\XA3WMotorState\JSState.cs" />
+    <Compile Include="State\XA3WMotorState\KSState.cs" />
+    <Compile Include="State\XA3WMotorState\MotorBaseState.cs" />
+    <Compile Include="State\XA3WMotorState\MotorStateManager.cs" />
+    <Compile Include="State\XA3WMotorState\SampleState.cs" />
+    <Compile Include="State\XA3WMotorState\Y1State.cs" />
+    <Compile Include="State\XA3WMotorState\YState.cs" />
+    <Compile Include="State\XA3WMotorState\Z1State.cs" />
+    <Compile Include="State\XA3WMotorState\Z2State.cs" />
+    <Compile Include="State\XA3WMotorState\ZState.cs" />
+    <Compile Include="State\XA3WMotorState\ZWJSState.cs" />
+    <Compile Include="State\XA3WMotorState\ZWKSState.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{976C59CE-B481-4578-90ED-6C23C07A503C}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Signal\Signal.csproj">
+      <Project>{6F778CC2-B7E7-42A1-A3AF-B09BE992ADAF}</Project>
+      <Name>Signal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{4B9DB326-9C58-49D3-88A6-85A6C0158023}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

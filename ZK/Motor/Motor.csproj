@@ -1,0 +1,175 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDAE0410-43C8-4E40-BF25-6942A36FB70C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Motor</RootNamespace>
+    <AssemblyName>Motor</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=7.2.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\RefBin\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="GenCode128, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\RefBin\GenCode128.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exam\IMotorStateManager.cs" />
+    <Compile Include="Exam\MotorSignalTranslator.cs" />
+    <Compile Include="Exam\State\MotorState\BaseState.cs" />
+    <Compile Include="Exam\State\MotorState\C5State.cs" />
+    <Compile Include="Exam\State\MotorState\IdleState.cs" />
+    <Compile Include="Exam\State\MotorState\JSState.cs" />
+    <Compile Include="Exam\State\MotorState\KSState.cs" />
+    <Compile Include="Exam\State\MotorBaseState.cs" />
+    <Compile Include="Exam\State\MotorState\MotorStateManager.cs" />
+    <Compile Include="Exam\State\MotorState\SampleState.cs" />
+    <Compile Include="Exam\State\MotorState\Y1State.cs" />
+    <Compile Include="Exam\State\MotorState\YState.cs" />
+    <Compile Include="Exam\State\MotorState\Z1State.cs" />
+    <Compile Include="Exam\State\MotorState\ZState.cs" />
+    <Compile Include="Exam\State\XA2WMotorState\BaseState.cs" />
+    <Compile Include="Exam\State\XA2WMotorState\C5State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\IdleState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\JSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\KSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\MotorStateManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\SampleState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\Y1State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\Y2State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\YState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\Z1State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\Z2State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\ZState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\ZWJSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA2WMotorState\ZWKSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\BaseState.cs" />
+    <Compile Include="Exam\State\XA3WMotorState\C5State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\IdleState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\JSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\KSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\MotorStateManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\SampleState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\Y1State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\YState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\Z1State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\Z2State.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\ZState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\ZWJSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exam\State\XA3WMotorState\ZWKSState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Module\ModelDisplay\MotorModelDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Module\ModelDisplay\XAMotorModelDisplayPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Signal\MotorMonitor.cs" />
+    <Compile Include="Util\MotorSignalSettings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{10948E8D-C5B7-45F0-8672-E2C02DAE5EB0}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Share\Share.csproj">
+      <Project>{8D27F55A-D857-43B0-84CE-FF57410BD0CB}</Project>
+      <Name>Share</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)$(OutDir)$(TargetFileName) $(SolutionDir)RefBin\ /E /Y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
